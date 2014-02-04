@@ -1,14 +1,13 @@
-﻿@model QuoteTest.Models.Aauthor
+﻿@model QuoteTest.Models.Author
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Details";
 }
 
-<h2>Delete</h2>
+<h2>Details</h2>
 
-<h3>Are you sure you want to delete this?</h3>
 <fieldset>
-    <legend>Aauthor</legend>
+    <legend>Author</legend>
 
     <div class="display-label">
          @Html.DisplayNameFor(model => model.Alias)
@@ -24,10 +23,7 @@
         @Html.DisplayFor(model => model.Name)
     </div>
 </fieldset>
-@using (Html.BeginForm()) {
-    @Html.AntiForgeryToken()
-    <p>
-        <input type="submit" value="Delete" /> |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
-}
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

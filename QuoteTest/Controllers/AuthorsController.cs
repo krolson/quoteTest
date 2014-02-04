@@ -9,33 +9,33 @@ using QuoteTest.Models;
 
 namespace QuoteTest.Controllers
 {
-    public class AauthorsController : Controller
+    public class AuthorsController : Controller
     {
-        private QuoteTest.Models.Aauthor.AauthorDBContext db = new QuoteTest.Models.Aauthor.AauthorDBContext();
+        private AuthorDBContext db = new AuthorDBContext();
 
         //
-        // GET: /Aauthors/
+        // GET: /Authors/
 
         public ActionResult Index()
         {
-            return View(db.Aauthors.ToList());
+            return View(db.Authors.ToList());
         }
 
         //
-        // GET: /Aauthors/Details/5
+        // GET: /Authors/Details/5
 
         public ActionResult Details(int id = 0)
         {
-            Aauthor aauthor = db.Aauthors.Find(id);
-            if (aauthor == null)
+            Author author = db.Authors.Find(id);
+            if (author == null)
             {
                 return HttpNotFound();
             }
-            return View(aauthor);
+            return View(author);
         }
 
         //
-        // GET: /Aauthors/Create
+        // GET: /Authors/Create
 
         public ActionResult Create()
         {
@@ -43,73 +43,73 @@ namespace QuoteTest.Controllers
         }
 
         //
-        // POST: /Aauthors/Create
+        // POST: /Authors/Create
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Aauthor aauthor)
+        public ActionResult Create(Author author)
         {
             if (ModelState.IsValid)
             {
-                db.Aauthors.Add(aauthor);
+                db.Authors.Add(author);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(aauthor);
+            return View(author);
         }
 
         //
-        // GET: /Aauthors/Edit/5
+        // GET: /Authors/Edit/5
 
         public ActionResult Edit(int id = 0)
         {
-            Aauthor aauthor = db.Aauthors.Find(id);
-            if (aauthor == null)
+            Author author = db.Authors.Find(id);
+            if (author == null)
             {
                 return HttpNotFound();
             }
-            return View(aauthor);
+            return View(author);
         }
 
         //
-        // POST: /Aauthors/Edit/5
+        // POST: /Authors/Edit/5
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Aauthor aauthor)
+        public ActionResult Edit(Author author)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(aauthor).State = EntityState.Modified;
+                db.Entry(author).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(aauthor);
+            return View(author);
         }
 
         //
-        // GET: /Aauthors/Delete/5
+        // GET: /Authors/Delete/5
 
         public ActionResult Delete(int id = 0)
         {
-            Aauthor aauthor = db.Aauthors.Find(id);
-            if (aauthor == null)
+            Author author = db.Authors.Find(id);
+            if (author == null)
             {
                 return HttpNotFound();
             }
-            return View(aauthor);
+            return View(author);
         }
 
         //
-        // POST: /Aauthors/Delete/5
+        // POST: /Authors/Delete/5
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Aauthor aauthor = db.Aauthors.Find(id);
-            db.Aauthors.Remove(aauthor);
+            Author author = db.Authors.Find(id);
+            db.Authors.Remove(author);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

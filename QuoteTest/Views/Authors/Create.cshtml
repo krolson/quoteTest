@@ -1,19 +1,17 @@
-﻿@model QuoteTest.Models.Aauthor
+﻿@model QuoteTest.Models.Author
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Create";
 }
 
-<h2>Edit</h2>
+<h2>Create</h2>
 
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
     <fieldset>
-        <legend>Aauthor</legend>
-
-        @Html.HiddenFor(model => model.ID)
+        <legend>Author</legend>
 
         <div class="editor-label">
             @Html.LabelFor(model => model.Alias)
@@ -32,7 +30,7 @@
         </div>
 
         <p>
-            <input type="submit" value="Save" />
+            <input type="submit" value="Create" />
         </p>
     </fieldset>
 }

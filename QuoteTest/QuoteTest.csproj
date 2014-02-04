@@ -181,8 +181,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\AauthorsController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AuthorsController.cs" />
     <Compile Include="Controllers\HelloWorldController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\QuotationsController.cs" />
@@ -191,7 +191,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Models\Aauthor.cs" />
+    <Compile Include="Models\Author.cs" />
+    <Compile Include="Models\People.cs" />
     <Compile Include="Models\Quote.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -315,11 +316,11 @@
     <Content Include="Views\Quotations\Create.cshtml" />
     <Content Include="Views\Quotations\Edit.cshtml" />
     <Content Include="Views\Quotations\Delete.cshtml" />
-    <Content Include="Views\Aauthors\Index.cshtml" />
-    <Content Include="Views\Aauthors\Details.cshtml" />
-    <Content Include="Views\Aauthors\Create.cshtml" />
-    <Content Include="Views\Aauthors\Edit.cshtml" />
-    <Content Include="Views\Aauthors\Delete.cshtml" />
+    <Content Include="Views\Authors\Index.cshtml" />
+    <Content Include="Views\Authors\Details.cshtml" />
+    <Content Include="Views\Authors\Create.cshtml" />
+    <Content Include="Views\Authors\Edit.cshtml" />
+    <Content Include="Views\Authors\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
