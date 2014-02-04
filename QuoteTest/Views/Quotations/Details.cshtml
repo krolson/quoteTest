@@ -1,0 +1,29 @@
+﻿@model QuoteTest.Models.Quote
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Quote</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Quotation)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Quotation)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AuthorID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AuthorID)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
