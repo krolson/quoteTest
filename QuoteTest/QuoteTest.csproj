@@ -192,7 +192,6 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Author.cs" />
-    <Compile Include="Models\People.cs" />
     <Compile Include="Models\Quote.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -311,16 +310,16 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\HelloWorld\Index.cshtml" />
     <Content Include="Views\HelloWorld\Welcome.cshtml" />
-    <Content Include="Views\Quotations\Index.cshtml" />
-    <Content Include="Views\Quotations\Details.cshtml" />
-    <Content Include="Views\Quotations\Create.cshtml" />
-    <Content Include="Views\Quotations\Edit.cshtml" />
-    <Content Include="Views\Quotations\Delete.cshtml" />
     <Content Include="Views\Authors\Index.cshtml" />
     <Content Include="Views\Authors\Details.cshtml" />
     <Content Include="Views\Authors\Create.cshtml" />
     <Content Include="Views\Authors\Edit.cshtml" />
     <Content Include="Views\Authors\Delete.cshtml" />
+    <Content Include="Views\Quotations\Index.cshtml" />
+    <Content Include="Views\Quotations\Details.cshtml" />
+    <Content Include="Views\Quotations\Create.cshtml" />
+    <Content Include="Views\Quotations\Edit.cshtml" />
+    <Content Include="Views\Quotations\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

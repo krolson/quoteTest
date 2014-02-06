@@ -14,15 +14,23 @@ namespace QuoteTest
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+               name: "Author",
+               url: "Authors/{alias}",
+               defaults: new { controller = "Authors", action = "Index", alias = UrlParameter.Optional }
+               );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
 
-            routes.MapRoute(
-                name: "Hello",
-                url: "{controller}/{action}/{name}/{id}"
-                );
+            //routes.MapRoute(
+            //    name: "Hello",
+            //    url: "{controller}/{action}/{name}/{id}"
+            //    );
+
+           
 
 
         }

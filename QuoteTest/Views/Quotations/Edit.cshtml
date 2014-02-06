@@ -24,11 +24,27 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.AuthorID)
+            @Html.LabelFor(model => model.Author)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.AuthorID)
-            @Html.ValidationMessageFor(model => model.AuthorID)
+            @Html.EditorFor(model => model.Author)
+            @Html.ValidationMessageFor(model => model.Author)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Alias)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Alias)
+            @Html.ValidationMessageFor(model => model.Alias)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Context)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Context)
+            @Html.ValidationMessageFor(model => model.Context)
         </div>
 
         <p>

@@ -23,7 +23,8 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model) {   
+    if(string.IsNullOrEmpty(ViewBag.Alias) || item.Alias.StartsWith(ViewBag.Alias, StringComparison.InvariantCultureIgnoreCase)) {
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Alias)
@@ -40,6 +41,7 @@
             @Html.ActionLink("Delete", "Delete", new { id=item.ID })
         </td>
     </tr>
+    }
 }
 
 </table>

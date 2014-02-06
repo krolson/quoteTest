@@ -16,9 +16,20 @@ namespace QuoteTest.Controllers
         //
         // GET: /Authors/
 
-        public ActionResult Index()
+        public ActionResult Index(string alias)
         {
+            ViewBag.Alias = alias;
             return View(db.Authors.ToList());
+        }
+
+        public string GetAuthorName(int id)
+        {
+            Author author = db.Authors.Find(id);
+            if (author == null)
+            {
+                return string.Empty;
+            }
+            return author.Name;
         }
 
         //
